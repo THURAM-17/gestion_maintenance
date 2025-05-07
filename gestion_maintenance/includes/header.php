@@ -1,8 +1,10 @@
+<?php ob_start(); ?>
 <?php
 // Démarrer la session si elle n'est pas déjà démarrée
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+// Reste du code...
 
 // Fonction pour vérifier si l'utilisateur est connecté
 function isLoggedIn() {
@@ -24,7 +26,7 @@ if (!isLoggedIn() && !in_array($current_page, $auth_pages) && strpos($current_pa
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion des Maintenances Préventives - PAD</title>
+    <title>Gestion des Maintenances Préventives </title>
     
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
